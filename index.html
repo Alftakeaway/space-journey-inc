@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Poldo</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- CSS Bootstrap Stylesheets/Scripts -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://getbootstrap.com/docs/5.2/assets/css/docs.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="css/styles.css" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&family=Quicksand&family=Ubuntu&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+    />
+    <style>
+      /* Main HTML Tags */
+      body {
+        font-family: 'Quicksand', sans-serif;
+      }
+
+      h3 {
+        font-family: 'Ubuntu';
+        font-weight: bold;
+      }
+      a {
+        font-weight: bold;
+      }
+
+      h2 {
+        font-family: 'Montserrat';
+        font-size: 3rem;
+        line-height: 1.5;
+        font-weight: bold;
+      }
+
+      p {
+        color: #748da6;
+      }
+
+      /* Color Section */
+      .white-section {
+        background-color: #fff;
+      }
+
+      .colored-section {
+        background-color: #ff8000;
+        color: #f9f9f9;
+      }
+
+      /* Title Bar */
+      .container-fluid {
+        padding: 3% 15% 7%;
+      }
+
+      .Heading1 {
+        font-family: 'Montserrat';
+        font-weight: bold;
+        line-height: 1.5;
+        font-size: 3.5rem;
+      }
+
+      /* Navigation Bar */
+      .navbar {
+        padding-bottom: 4.5rem;
+      }
+
+      .navbar-brand {
+        font-family: 'Ubuntu', sans-serif;
+        font-weight: bold;
+        font-size: 2.5rem;
+      }
+
+      .nav-item {
+        padding: 0 16px;
+      }
+
+      .nav-link {
+        font-family: 'Montserrat-Light';
+        font-weight: lighter;
+        font-size: 1.2rem;
+      }
+
+      /* Download Buttons */
+      .download-btn {
+        margin: 5% 3% 5% 0;
+      }
+
+      /* Title Image */
+      .title-img {
+        width: 20%;
+        transform: rotate(25deg);
+        position: absolute;
+        margin-left: 100px;
+      }
+
+      /* Features Section */
+      #features {
+        padding: 7% 15%;
+        position: relative;
+      }
+
+      .feature-box {
+        text-align: center;
+        padding: 5%;
+      }
+
+      .icon {
+        color: #ff8000;
+        margin-bottom: 1rem;
+      }
+
+      .icon:hover {
+        color: #ff4c68;
+      }
+
+      /* Testimonials Section */
+      #supporters {
+        text-align: center;
+        background-color: #ff8080;
+        color: #f9f9f9;
+      }
+
+      .carousel-item {
+        padding: 7% 15%;
+      }
+
+      .supporters-img {
+        width: 80px;
+        height: 80px;
+        border-radius: 100%;
+        margin: 20px;
+      }
+
+      /* Press Section */
+      #press {
+        background-color: #ff8080;
+        text-align: center;
+        padding-bottom: 3%;
+      }
+
+      .press-img {
+        width: 15%;
+        margin: 20px 20px 50px;
+      }
+
+      /* explore Section */
+      #explore {
+        padding: 100px;
+        text-align: center;
+      }
+
+      .explore-cln {
+        padding: 3% 2%;
+      }
+
+      /* Footer Section */
+      #cta {
+        text-align: center;
+        padding: 100px 100px 10px;
+      }
+
+      #footer {
+        padding: 10px;
+        text-align: center;
+        font-size: 1.1rem;
+      }
+
+      .social-links {
+        padding: 10px;
+      }
+
+      .footer-link {
+        text-decoration: none;
+        color: #000;
+      }
+
+      /* @media Section */
+      @media (max-width: 1025px) {
+        .title-img {
+          position: static;
+          transform: rotate(0);
+          width: 60%;
+          margin: 0;
+        }
+
+        .footer1 {
+          font-size: 1.1rem;
+        }
+
+        .Heading1 {
+          text-align: center;
+          font-size: 2.5rem;
+        }
+
+        #title {
+          text-align: center;
+        }
+
+        .nav-item {
+          text-align: right;
+        }
+
+        #cta {
+          font-size: 1.2rem;
+        }
+        h2,
+        h3 {
+          font-size: 1.5rem;
+        }
+      }
+      .btn-bd-primary {
+        --bs-btn-font-weight: 600;
+        --bs-btn-color: var(--bs-white);
+        --bs-btn-bg: var(--bd-violet);
+        --bs-btn-border-color: var(--bd-violet);
+        --bs-btn-border-radius: 0.5rem;
+        --bs-btn-hover-color: var(--bs-orange);
+        --bs-btn-hover-bg: #{shade-color($bd-violet, 10%)};
+        --bs-btn-hover-border-color: #{shade-color($bd-violet, 10%)};
+        --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+        --bs-btn-active-color: var(--bs-btn-hover-color);
+        --bs-btn-active-bg: #{shade-color($bd-violet, 20%)};
+        --bs-btn-active-border-color: #{shade-color($bd-violet, 20%)};
+      }
+
+      @media all and (min-width: 992px) {
+        .navbar .dropdown-menu-end {
+          right: 0;
+          left: auto;
+          min-width: 60px !important;
+        }
+        .navbar .nav-item .dropdown-menu {
+          display: block;
+          opacity: 0;
+          visibility: hidden;
+          transition: 0.3s;
+          margin-top: 0;
+          min-width: 60px !important;
+        }
+        .navbar .nav-item:hover .nav-link {
+          color: #fff;
+        }
+        .navbar .dropdown-menu.fade-down {
+          top: 80%;
+          transform: rotateX(-75deg);
+          transform-origin: 0% 0%;
+        }
+        .navbar .dropdown-menu.fade-up {
+          top: 180%;
+        }
+        .navbar .nav-item:hover .dropdown-menu {
+          transition: 0.3s;
+          opacity: 1;
+          visibility: visible;
+          top: 100%;
+          transform: rotateX(0deg);
+        }
+      }
+      .light {
+        background: linear-gradient(270deg, #ffffff, #44d7e3, #52eefc, #3582b3);
+        background-size: 800% 800%;
+
+        -webkit-animation: alfredo 1s ease infinite;
+        -moz-animation: alfredo 1s ease infinite;
+        animation: alfredo 1s ease infinite;
+      }
+
+      @-webkit-keyframes alfredo {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+      @-moz-keyframes alfredo {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+      @keyframes alfredo {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <section class="colored-section" id="title">
+      <!-- NavigationBar Code -->
+      <div class="container-fluid">
+        <nav class="navbar navbar-dark navbar-expand-lg">
+          <a class="navbar-brand" href="#">Must-Seat</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarTogglerDemo01"
+            aria-controls="navbarTogglerDemo01"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <li class="nav-item">
+                <a class="nav-link fw-bold" aria-current="page" href="#footer"
+                  >Contact</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link fw-bold" href="#explore">Explore</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link fw-bold" href="#cta">Journey</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle fw-bold"
+                  href="#"
+                  role="button"
+                  id="dropdownMenuButton1"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Plus
+                </a>
+                <ul
+                  class="dropdown-menu fade-down"
+                  style="background-color: var(--bs-orange)"
+                >
+                  <li><a class="dropdown-item" href="#explore">Rates</a></li>
+                  <li><a class="dropdown-item" href="#footer">About us</a></li>
+                  <li>
+                    <hr class="dropdown-divider" />
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#supporters">Feedback</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </nav>
+
+        <!-- Main Text + Downloads Buttons -->
+        <div class="row">
+          <div class="col-lg-6">
+            <h1 class="Heading1">Find your favourite galaxy and move!</h1>
+            <button type="button" class="btn light btn-lg download-btn">
+              <i class="fa-solid fa-shuttle-space"></i> Lightspeed
+            </button>
+            <button
+              type="button"
+              class="btn btn-outline-light btn-lg download-btn"
+            >
+              <i class="fa-solid fa-user-astronaut"></i> Teleport
+            </button>
+          </div>
+          <div class="col-lg-6">
+            <img
+              class="title-img"
+              src="https://media1.giphy.com/media/vDV9WHgNKReBW/giphy-downsized-large.gif"
+              alt="solar"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features -->
+
+    <section class="white-section" id="features">
+      <div class="row">
+        <div class="feature-box col-lg-4">
+          <i class="fa-brands fa-teamspeak fa-4x icon"></i>
+          <h3>Max Usage</h3>
+          <p>
+            You'd be amazed how much research you can get done when you have no
+            life whatsoever.
+          </p>
+        </div>
+        <div class="feature-box col-lg-4">
+          <i class="fa-solid fa-spaghetti-monster-flying fa-4x icon"></i>
+          <h3>Nonsense Tips</h3>
+          <p>
+            With a library, it is easier to hope for serendipity than to look
+            for a precise answer.
+          </p>
+        </div>
+        <div class="feature-box col-lg-4">
+          <i class="fa-brands fa-fort-awesome-alt fa-4x icon"></i>
+          <h3>Patreon Rants</h3>
+          <p>
+            I believe in innovation and that the way you get innovation is you
+            fund research, and you learn the basic facts.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Supporters -->
+
+    <section class="colored-section" id="supporters">
+      <div
+        id="testimonial-carousel"
+        class="carousel slide"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <h2>
+              In this single galaxy of ours there are eighty-seven thousand
+              million suns.
+            </h2>
+            <img
+              class="supporters-img"
+              src="https://images.unsplash.com/photo-1654700506384-3b1ac95dec89?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1023&q=80"
+              alt="dog-profile"
+            />
+            <em>Roxanne, Johannesburg</em>
+          </div>
+          <div class="carousel-item">
+            <h2>
+              Space has the ability to produce a triple bottom line, or ROIII:
+              Return on Investment, Innovation, and Inspiration.
+            </h2>
+            <img
+              class="supporters-img"
+              src="https://images.unsplash.com/photo-1654700506384-3b1ac95dec89?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1023&q=80"
+              alt="lady-profile"
+            />
+            <em>Daryl, London</em>
+          </div>
+          <div class="carousel-item">
+            <h2>
+              Discover the force of the skies O Men: once recognised it can be
+              put to use.
+            </h2>
+            <img
+              class="supporters-img"
+              src="https://images.unsplash.com/photo-1654700506384-3b1ac95dec89?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1023&q=80"
+              alt="lady-profile"
+            />
+            <em>Alex.v, IT</em>
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#testimonial-carousel"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#testimonial-carousel"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon"></span>
+        </button>
+      </div>
+    </section>
+
+    <!-- Press -->
+
+    <section class="colored-section" id="press">
+      <img
+        class="press-img"
+        src="https://www.logo.wine/a/logo/Slack_Technologies/Slack_Technologies-Logo.wine.svg"
+        alt="slack"
+      />
+      <img
+        class="press-img"
+        src="https://img.lemde.fr/2020/01/21/169/0/600/299/1440/720/60/0/bcf0ca2_OFCRqd4hoLutX_EAtiVhAVYa.png"
+        alt="lumapps"
+      />
+      <img
+        class="press-img"
+        src="https://i.pinimg.com/originals/a1/0a/5a/a10a5a866c8a580b14fc9755146a7091.png"
+        alt="sendbird"
+      />
+      <img
+        class="press-img"
+        src="https://cdn.pixabay.com/photo/2015/12/11/11/43/google-1088003_960_720.png"
+        alt="google"
+      />
+    </section>
+
+    <!-- explore -->
+
+    <section class="white-section" id="explore">
+      <h2>A New Era for Time Travel</h2>
+      <p>Maximize your profits with 100% money guaranteed .</p>
+      <div class="row">
+        <div class="explore-cln col-lg-4 col-md-6">
+          <div class="card">
+            <div class="card-header">
+              <h3>Mercury</h3>
+            </div>
+            <div class="card-body">
+              <h2>Free</h2>
+              <p>1 trip per day</p>
+              <p>10 Cosmic Beams Per Day</p>
+              <p>Unlimited LightSpeed Usage</p>
+              <button type="button" class="btn btn-lg btn-bd-primary">
+                Sign Up
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="explore-cln col-lg-4 col-md-6">
+          <div class="card">
+            <div class="card-header">
+              <h3>Pluto</h3>
+            </div>
+            <div class="card-body">
+              <h2>€49 / mo</h2>
+              <p>Unlimited LightSpeed Usage</p>
+              <p>Unlimited Space Curving</p>
+              <p>Unlimited Reality Manipulation</p>
+              <button
+                type="button"
+                class="btn btn-lg btn-dark btn-outline-danger"
+              >
+                Sign Up
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="explore-cln col-lg-4">
+          <div class="card">
+            <div class="card-header">
+              <h3>Saturn</h3>
+            </div>
+            <div class="card-body">
+              <h2>€ 99 / mo</h2>
+              <p>Krypton Trips Free</p>
+              <p>Unlimited Speed&Gravity</p>
+              <p>Neutron Force-Field</p>
+              <p>Biomass Variation</p>
+              <button type="button" class="btn btn-lg btn-outline-success">
+                Sign Up
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action -->
+
+    <section class="colored-section" id="cta">
+      <h3 class="Heading1">Travel Now to a Different Galaxy .</h3>
+      <button type="button" class="btn btn-dark btn-lg download-btn">
+        <i class="fa-solid fa-gauge-high"></i> Instant
+      </button>
+      <button type="button" class="btn btn-light btn-lg download-btn">
+        <i class="fa-solid fa-gauge-simple-high"></i> Seamless
+      </button>
+    </section>
+
+    <!-- Footer -->
+
+    <footer class="white-section" id="footer">
+      <a class="footer-link" href="#"
+        ><i class="fa-brands fa-twitter social-links"></i
+      ></a>
+      <a class="footer-link" href="#"
+        ><i class="fa-brands fa-facebook-f social-links"></i
+      ></a>
+      <a class="footer-link" href="#"
+        ><i class="fa-brands fa-instagram social-links"></i
+      ></a>
+      <a class="footer-link" href="#"
+        ><i class="fa-solid fa-envelope social-links"></i
+      ></a>
+
+      <p>© Copyright free</p>
+    </footer>
+  </body>
+</html>
