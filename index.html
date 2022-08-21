@@ -25,8 +25,9 @@
     <!-- Font Awesome Icons -->
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+      href="https://site-assets.fontawesome.com/releases/v6.1.2/css/all.css"
     />
+ 
     <style>
       /* Main HTML Tags */
       body {
@@ -435,7 +436,27 @@
 .star-field .layer:nth-child(3) {
     animation: sf-fly-by-3 5s linear infinite;
 }
+.colorato  {
+	background: linear-gradient(-45deg, #6355a4, #6355a4, #e89a3e, #e89a3e);
+	background-size: 300%;
 
+
+	
+
+	
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	animation: animated_text 10s ease-in-out infinite;
+	-moz-animation: animated_text 10s ease-in-out infinite;
+	-webkit-animation: animated_text 10s ease-in-out infinite;
+}
+
+@keyframes animated_text {
+	0% { background-position: 0px 50%; }
+	50% { background-position: 100% 50%; }
+	100% { background-position: 0px 50%; }
+}}
+}
    </style>
   </head>
 
@@ -450,7 +471,7 @@
       <!-- NavigationBar Code -->
       <div class="container-fluid">
         <nav class="navbar navbar-dark navbar-expand-lg">
-          <a class="navbar-brand" href="#">Must-Seat</a>
+          <a class="navbar-brand" href="#"> <i class="fa-thin fa-atom-simple"></i> Must-Seat <i class="fa-thin fa-spin fa-hurricane "></i> </a>
           <button
             class="navbar-toggler"
             type="button"
@@ -466,38 +487,38 @@
           <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
             <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
               <li class="nav-item">
-                <a class="nav-link fw-bold" aria-current="page" href="#footer"
-                  >Contact</a
+                <a class="nav-link fw-bold colorato" aria-current="page" href="#footer"
+                  > <i class="fa-thin fa-user-alien"></i> Contact</a
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link fw-bold" href="#explore">Explore</a>
+                <a class="nav-link fw-bold colorato " href="#explore"> <i class="fa-thin fa-ufo-beam"></i> Explore</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link fw-bold" href="#cta">Journey</a>
+                <a class="nav-link fw-bold colorato" href="#cta"><i class="fa-thin fa-person-from-portal"></i> Journey</a>
               </li>
               <li class="nav-item dropdown">
                 <a
-                  class="nav-link dropdown-toggle fw-bold"
+                  class="nav-link dropdown-toggle fw-bold colorato" 
                   href="#"
                   role="button"
                   id="dropdownMenuButton1"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                 >
-                  Plus
+                <i class="fa-thin fa-explosion "></i>Plus
                 </a>
                 <ul
-                  class="dropdown-menu fade-down"
-                  style="background-color: var(--bs-orange)"
+                  class="dropdown-menu fade-down colorato "
+                  
                 >
-                  <li><a class="dropdown-item" href="#explore">Rates</a></li>
-                  <li><a class="dropdown-item" href="#footer">About us</a></li>
+                  <li><a class="dropdown-item colorato" href="#explore">Rates</a></li>
+                  <li><a class="dropdown-item colorato" href="#footer">About us</a></li>
                   <li>
-                    <hr class="dropdown-divider" />
+                    <hr class="dropdown-divider colorato" />
                   </li>
                   <li>
-                    <a class="dropdown-item" href="#supporters">Feedback</a>
+                    <a class="dropdown-item colorato" href="#supporters">Feedback</a>
                   </li>
                 </ul>
               </li>
@@ -508,21 +529,21 @@
         <!-- Main Text + Downloads Buttons -->
         <div class="row">
           <div class="col-lg-6">
-            <h1 class="Heading1">Find your Favourite Galaxy and Move!</h1>
+            <h1 class="Heading1 colorato">Find your Favourite Galaxy and Move!</h1>
             <button
               id="pot"
               type="button"
-              class="btn light btn-lg download-btn btn-outline-danger"
+              class="btn light text-bg-danger btn-lg download-btn btn-outline-danger"
             >
-              <i class="fa-solid fa-umbrella-beach"></i>
-              <i class="fa-solid fa-shuttle-space fa-spin-hover"></i> Lightspeed
-              <i class="fa-solid fa-house-flag"></i>
+            <i class="fa-thin fa-space-station-moon-construction"></i>
+              <i class="fa-thin fa-shuttle-space fa-spin-hover"></i> Lightspeed
+              <i class="fa-thin fa-building-flag"></i>
             </button>
             <button
               type="button"
               class="btn btn-outline-light btn-lg download-btn"
             >
-              <i class="fa-solid fa-user-astronaut"></i> Teleport
+              <i class="fa-thin fa-user-astronaut"></i> Teleport
             </button>
           </div>
           <div class="col-lg-6">
@@ -590,8 +611,7 @@
           </div>
           <div class="carousel-item">
             <h2>
-              Space has the ability to produce a triple bottom line, or ROIII:
-              Return on Investment, Innovation, and Inspiration.
+              Space has the ability to produce a  Return on Investment, Innovation, and Inspiration.
             </h2>
             <img
               class="supporters-img"
