@@ -27,6 +27,7 @@
       rel="stylesheet"
       href="https://site-assets.fontawesome.com/releases/v6.1.2/css/all.css"
     /> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.9.1/font/bootstrap-icons.min.css" integrity="sha512-5PV92qsds/16vyYIJo3T/As4m2d8b6oWYfoqV+vtizRB6KhF1F9kYzWzQmsO6T3z3QG2Xdhrx7FQ+5R1LiQdUA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="//db.onlinewebfonts.com/c/a21764905c623777a48ec557b4229c22?family=Anurati" rel="stylesheet" type="text/css"/>
     <style>
       /* Main HTML Tags */
@@ -291,11 +292,17 @@
         -o-animation: fa-spin 2s infinite linear;
         animation: fa-spin 2s infinite linear;
       }
+      #bat:active .fa-teleport {
+        -webkit-animation: fa-fade 2s infinite linear;
+        -moz-animation: fa-fade 2s infinite linear;
+        -o-animation: fa-fade 2s infinite linear;
+        animation: fa-fade 2s infinite linear;
+      }
       #pot:active i.fa-shuttle-space {
         position: relative;
-        -webkit-animation: linear infinite;
+        -webkit-animation: linear ;
         -webkit-animation-name: run;
-        -webkit-animation-duration: 0.5s;
+        -webkit-animation-duration: 0.3s;
         -webkit-animation-play-state: running;
       }
 
@@ -443,12 +450,7 @@
 }
 .colorato  {
 	background: linear-gradient(-45deg, #6355a4, #6355a4, #e89a3e, #e89a3e);
-	background-size: 300%;
-
-
-	
-
-	
+	background-size: 300%;	
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 	animation: animated_text 10s ease-in-out infinite;
@@ -497,10 +499,10 @@
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link fw-bold colorato " href="#explore"> <i class="fa-thin fa-ufo-beam"></i> Explore</a>
+                <a class="nav-link fw-bold colorato " href="#explore"> <i class="fa-thin fa-ufo-beam"></i>  Explore</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link fw-bold colorato" href="#cta"><i class="fa-thin fa-person-from-portal"></i> Journey</a>
+                <a class="nav-link fw-bold colorato" href="#cta"><i class="fa-thin fa-person-from-portal"></i> Journey </a>
               </li>
               <li class="nav-item dropdown">
                 <a
@@ -541,14 +543,15 @@
               class="btn light text-bg-danger btn-lg download-btn btn-outline-danger"
             >
             <i class="fa-thin fa-space-station-moon-construction"></i>
-              <i class="fa-thin fa-shuttle-space fa-spin-hover"></i> Lightspeed
+              <i class="fa-thin fa-shuttle-space  fa-spin-hover"></i> Lightspeed
               <i class="fa-thin fa-building-flag"></i>
             </button>
             <button
+            id="bat"
               type="button"
               class="btn btn-outline-light btn-lg download-btn"
             >
-              <i class="fa-thin fa-user-astronaut"></i> Teleport
+              <i class="fa-thin fa-user-astronaut fa-teleport"></i> Teleport
             </button>
           </div>
           <div class="col-lg-6">
@@ -757,21 +760,17 @@
 
     <!-- Footer -->
 
-    <footer class="white-section" id="footer">
+    <footer class="white-section colorato" id="footer">
       <a class="footer-link" href="#"
-        ><i class="fa-brands fa-twitter social-links"></i
-      ></a>
+        > <i class="fa-brands fa-cloudflare fa-lg pe-2"></i> </a>
       <a class="footer-link" href="#"
-        ><i class="fa-brands fa-facebook-f social-links"></i
-      ></a>
+        ><i class="bi-github" role="img" aria-label="GitHub"></i></a>
       <a class="footer-link" href="#"
-        ><i class="fa-brands fa-instagram social-links"></i
-      ></a>
+        > <i class="fa-brands fa-git-alt ms-2"></i> </a>
       <a class="footer-link" href="#"
-        ><i class="fa-solid fa-envelope social-links"></i
-      ></a>
+        > <i class="fa-brands fa-bootstrap ms-2"></i></a>
 
-      <p>© Copyright free</p>
+      <p>© Copyright Alfredo Forte</p>
     </footer>
   </body>
 </html>
